@@ -1,0 +1,39 @@
+{
+  "name": "clinica-fisio-ia",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Clínica de fisioterapia atendida por IA: web con chat, WhatsApp y panel en directo",
+  "scripts": {
+    "dev": "concurrently -k -n server,panel -c blue,green \"node --watch-path=server --disable-warning=ExperimentalWarning server/index.js\" \"vite --config panel/vite.config.ts\"",
+    "build": "vite build --config panel/vite.config.ts",
+    "start": "npm run build && node --disable-warning=ExperimentalWarning server/index.js",
+    "seed": "node --disable-warning=ExperimentalWarning server/seed.js",
+    "migrar-sqlite": "node --disable-warning=ExperimentalWarning server/migrar-desde-sqlite.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "baileys": "7.0.0-rc14",
+    "bcryptjs": "3.0.2",
+    "dotenv": "17.2.3",
+    "express": "5.1.0",
+    "express-session": "1.18.2",
+    "pg": "8.23.1",
+    "pino": "9.9.0",
+    "qrcode": "1.5.4",
+    "socket.io": "4.8.1"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.12",
+    "@types/react-dom": "19.1.9",
+    "@vitejs/plugin-react": "5.0.2",
+    "concurrently": "^9.2.5",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "socket.io-client": "4.8.1",
+    "typescript": "5.9.2",
+    "vite": "^7.3.8"
+  }
+}

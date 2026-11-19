@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&family=Hanken+Grotesk:wght@400..600&display=swap");
+
+/* Noray Fisioterapia: brand tokens of the public website (web/index.html), for the admin panel.
+   Font tags used on the website, for an HTML <head> instead of the @import above:
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&family=Hanken+Grotesk:wght@400..600&display=swap" rel="stylesheet">
+   Headings: Newsreader at 400 (never bold). Text: Hanken Grotesk 400, and 500 for buttons, labels and names.
+   One accent (sage) only: the primary button, links and the focus ring. */
+:root {
+  /* palette: cream ground, near-black ink, one sage accent (as start.mjs brand printed it) */
+  --p-bg: #f4efe4; --p-surface: #ebe4d4; --p-ink: #1d1b17; --p-muted: #66635d;
+  --p-accent: #56704f; --p-accent-ink: #f4efe4; --p-action: #56704f; --p-action-ink: #f4efe4;
+  --p-inv-bg: #1d1b17; --p-inv-surface: #292723; --p-inv-ink: #f4efe4; --p-inv-muted: #9a968e;
+  --p-inv-accent: #56704f; --p-inv-accent-ink: #f4efe4; --p-inv-action: #56704f; --p-inv-action-ink: #f4efe4;
+
+  /* working names the website's CSS reads */
+  --bg: var(--p-bg); --surface: var(--p-surface); --ink: var(--p-ink); --muted: var(--p-muted);
+  --accent: var(--p-accent); --accent-ink: var(--p-accent-ink);
+  --action: var(--p-action); --action-ink: var(--p-action-ink);
+  --line: color-mix(in oklab, var(--p-ink) 11%, transparent);
+  --line-strong: color-mix(in oklab, var(--p-ink) 20%, transparent);
+
+  /* fonts */
+  --font-display: "Newsreader", Georgia, serif;
+  --font-text: "Hanken Grotesk", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.018em;
+  --display-tracking-xl: -0.025em;
+
+  /* type sizes (desktop; the website steps them down under 1024px) */
+  --t-label: 13px; --t-small: 14px; --t-body: 16px; --t-lead: 20px; --t-card: 20px; --t-h3: 28px;
+  --t-h2: clamp(30px, 1.72vw + 23.3px, 48px);
+  --t-h1: clamp(38px, 3.24vw + 25.4px, 72px);
+
+  /* radii: the "soft" scale */
+  --r-sm: 8px; --r-md: 12px; --r-lg: 20px; --r-btn: 8px;
+
+  /* spacing scale */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px;
+  --s-6: 32px; --s-7: 48px; --s-8: 64px; --s-9: 96px; --s-10: 128px;
+  --gutter: 24px;
+
+  /* controls and motion */
+  --btn-h: 44px;
+  --ease: cubic-bezier(.2, .8, .2, 1);
+  --dur: 180ms;
+}

@@ -1,0 +1,7 @@
+node_modules
+data/
+.env
+server/public/panel
+.taste-skill/chrome-*
+shots/
+.DS_Store
